@@ -1,0 +1,57 @@
+<script>
+    let s1 = {"nama": "Andi", nilai:80};
+    let s2 = {"nama": "Ali", nilai:90};
+    let s3 = {"nama": "Aji", nilai:70};
+    let s4 = {"nama": "Ani", nilai:90};
+    let s5 = {"nama": "Ando", nilai:85};
+
+    let siswa = [s1,s2,s3,s4,s5];
+</script>
+<table border="1" align="center" cellpadding="7%" cellspacing="0%" width="80%">
+    <thead bgcolor="gray">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nilai</th>
+            <th>Keterangan</th>
+            <th>Grade</th>
+            <th>Predikat</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+         <script>
+            var no = 1;
+            for (s of siswa){
+                let Keterangan = (s.nilai >= 60) ? "Lulus" : "Gagal";
+                let Grade = " ";
+                let Predikat = " ";
+
+                if(s.nilai > 85 && s.nilai <= 100) Grade = "A";
+                else if (s.nilai > 75 && s.nilai <= 85) Grade = "B";
+                else if (s.nilai > 60 && s.nilai <= 75) Grade = "C";
+                else if (s.nilai > 30 && s.nilai <= 60) Grade = "D";
+                else if (s.nilai >= 0 && s.nilai <= 30) Grade = "E";
+
+                switch(Grade){
+                    case "A" : Predikat = "Sempurna"; break;
+                    case "B" : Predikat = "Baik"; break;
+                    case "C" : Predikat = "Cukup"; break;
+                    case "D" : Predikat = "Kurang"; break;
+                    case "E" : Predikat = "Buruk"; break;
+                    default : Predikat = ""; break;
+                }
+
+                document.write("<tr>");
+                document.write("<td>" + no++ + "</td>");
+                document.write("<td>" + s.nama + "</td>");
+                document.write("<td>" + s.nilai + "</td>");
+                document.write("<td>" + Keterangan + "</td>");
+                document.write("<td>" + Grade + "</td>");
+                document.write("<td>" + Predikat + "</td>");
+                document.write("</tr>");
+
+                
+            }
+         </script> 
+    </tbody>
+</table>
