@@ -36,30 +36,39 @@ function datapegawai(){
     Swal.fire({
         title: 'Data Pegawai',
         html: `
-        <table border="1" align="center" cellpadding="10" cellspacing="0" width="50%" >
-            <thead>
-                <tr>
-                    <th>Nama Pegawai</th>
-                    <th>Jabatan</th>
-                    <th>Status</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>${nama}</td>
-                    <td>${jabatan}</td>
-                    <td>${status}</td>
-                </tr>
-            <tfoot id="totalGaji">
-                <tr>
-                    <td colspan="7">Total Gaji: ${totalGaji} </td>
-                </tr>
-            </tfoot>
-               
-            </tbody>
-        </table>
+        <div style="overflow-x: auto;">
+            <table style="width: 100%;" border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nama Pegawai</th>
+                        <th>Jabatan</th>
+                        <th>Status</th>
+                        <th>Gaji Pokok</th>
+                        <th>Tunjangan Jabatan</th>
+                        <th>BPJS</th>
+                        <th>Tunjangan Keluarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${nama}</td>
+                        <td>${jabatan}</td>
+                        <td>${status}</td>
+                        <td>${gajiPokok}</td>
+                        <td>${tunjanganJabatan}</td>
+                        <td>${bpjs}</td>
+                        <td>${tunjanganKeluarga}</td>
+                    </tr>
+                </tbody>
+                <tfoot id="totalGaji">
+                    <tr>
+                        <td colspan="7">Total Gaji: ${totalGaji} </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
         `,
         confirmButtonText: 'OK'
     });
+    
 }
