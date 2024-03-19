@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Tugas 4 JS Data Pegawai</title>
+    <style>
+        .form-container{
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+            
+            border: 1px solid #9c7deb;
+            background: #f0e8e8;
+            padding: 30px;
+            width: 300px; /* Sesuaikan lebar sesuai kebutuhan */
+            margin: 0 auto; /* Untuk menengahkan kotak formulir */
+        }
+        h1{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+        }
+        .button-container {
+        display: flex;
+        justify-content: center;
+    }
+  
+
+    </style>
+  
+</head>
+<body>
+    <div class="form-container" >
+    <h1>Data Pegawai</h1>
+    
+    <form id="datapegawai">
+        <label for="nama">Nama Pegawai :</label> 
+        <input type="text" name="nama" id="nama"> <br><br>
+        <label for="jabatan">Jabatan Pegawai :</label> 
+        <select name="jabatan" id="jabatan"></select><br><br>
+        <label for="status">Status Pegawai :</label> 
+        <select name="status" id="status"></select> <br><br>
+
+        <div class="button-container">
+                <input type="button" name="proses" id="proses" value="Cetak Data"  onclick="datapegawai()">
+            </div>
+    </form>
+</div>
+    <script src="js/pegawai.js"></script>
+</body>
+</html>
