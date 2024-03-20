@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    margin: auto;
+    background-color: rgb(250, 225, 192);
+}
+#div1, #div2, #div3 {
+    display: inline-block;
+    margin: auto;
+    width: 80%;
+    color: aqua;
+    border: 3px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background: greenyellow;
+    height: 400px; /* Atur tinggi yang sesuai */
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover; /* Mengubah ukuran latar belakang */
+    background-position: center;
+}

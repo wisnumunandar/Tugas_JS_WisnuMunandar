@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Handler</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <audio id="hover-sound1" src="1-Ayam-Keras.mp3"></audio>
+    <audio id="hover-sound2" src="suara-hewan-macan-menggeram.mp3"></audio>
+    <audio id="hover-sound3" src="suara-bebek.mp3"></audio>
+    <h2>Klik Dimana Saja Lalu Letakan kursor ke masing-masing kotak untuk melihat gambar dan suara</h2>
+    <div id="div1">
+        Hewan Ayam
+    </div>
+    <div id="div2">
+        Hewan Macan
+    </div>
+    <div id="div3">
+        Hewan Bebek
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Fungsi untuk memainkan suara
+            function playHoverSound(audioId) {
+                var audio = document.getElementById(audioId);
+                audio.play();
+            }
+
+            // Fungsi untuk menghentikan pemutaran suara
+            function stopHoverSound(audioId) {
+                var audio = document.getElementById(audioId);
+                audio.pause();
+                audio.currentTime = 0; // Mengatur ulang waktu pemutaran ke awal
+            }
+
+            window.onload = function() {
+                alert("Mohon Maaf Ka, untuk mematuhi kebijakan keamanan browser yang mencegah situs web memainkan suara secara otomatis tanpa izin pengguna, mohon lakukan klik di bagian manapun pada tampilan sebagai interaksi pertama. Setelah itu, arahkan mouse di atas gambar maka suara akan muncul. Terima kasih Ka");
+            };
+
+            $("#div1").mouseover(function(){
+                $(this).css({
+                    background: "url('https://png.pngtree.com/thumb_back/fw800/background/20230518/pngtree-six-chickens-walking-in-the-fall-image_2536368.jpg')"
+                });
+                playHoverSound("hover-sound1"); // Memanggil fungsi untuk memainkan suara
+            }).mouseout(function(){
+                $(this).css({
+                    background: "green"
+                });
+                stopHoverSound("hover-sound1"); // Memanggil fungsi untuk menghentikan suara
+            });
+
+            $("#div2").mouseover(function(){
+                $(this).css({
+                    background: "url('https://png.pngtree.com/background/20230424/original/pngtree-pictures-of-tigers-hd-wallpaper-picture-image_2465267.jpg')"
+                });
+                playHoverSound("hover-sound2"); // Memanggil fungsi untuk memainkan suara
+            }).mouseout(function(){
+                $(this).css({
+                    background: "green"
+                });
+                stopHoverSound("hover-sound2"); // Memanggil fungsi untuk menghentikan suara
+            });
+
+            $("#div3").mouseover(function(){
+                $(this).css({
+                    background: "url('https://www.putraperkasa.co.id/wp-content/uploads/2023/11/Bebek-Mallard-001.webp')"
+                });
+                playHoverSound("hover-sound3"); // Memanggil fungsi untuk memainkan suara
+            }).mouseout(function(){
+                $(this).css({
+                    background: "green"
+                });
+                stopHoverSound("hover-sound3"); // Memanggil fungsi untuk menghentikan suara
+            });
+        });
+    </script>
+</body>
+</html>
